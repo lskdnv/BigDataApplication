@@ -1,4 +1,3 @@
-<!-- Done by Jungwon Eom -->
 <?php
      include_once 'dbh.inc.php';
 ?>
@@ -17,12 +16,15 @@
 
 <!-- 데이터베이스에 가서 데이터를 찾아서 보여주기 -->
 <?php
-     $sql = "SELECT * FROM countries;";
+     $sql = "SELECT * FROM Countires;";
      $result = mysqli_query($conn, $sql);
      $resultCheck = mysqli_num_rows($result);
 
      if($resultCheck > 0){
-
+          echo "<div class \"\">";
+          echo " <a href=\"register.php\" class=\"btn btn-primary\">Register</a>";
+          echo "</div>";
+          
           echo "<table class = \"table table-bordered\" border = \"1\" align = \"center\">";
 
           echo "<thead class=\"thead-dark\">";
